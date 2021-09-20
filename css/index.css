@@ -1,0 +1,117 @@
+/*INDEX*/
+
+.container {
+    display: grid;
+    /*grid-template: 4filas/2columnas;*/
+    grid-template: 100vh 80vh 80vh 80vh/ 19vw 80vw;
+    grid-template-areas: "main main" "servicios servicios" "clientes clientes" "footer footer";
+    grid-column-gap: 1vw;
+    grid-row-gap: 0vh;
+    margin-top: 10vh;
+    height: 90vh;
+    width: 100vw;
+}
+
+
+/*Indicar que area va a ocupar cada item*/
+
+
+/*Main*/
+
+.main {
+    grid-area: main;
+    background-color: white;
+}
+
+.main img {
+    height: 25vh;
+}
+
+.main h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 6vw;
+    margin-top: 5vh;
+    color: #01497C;
+}
+
+p.presentacion,
+.main h2 {
+    color: #74B1DD;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+
+/*Servicios*/
+
+.servicios {
+    grid-area: servicios;
+    background-color: #9F64BF;
+}
+
+.servicios h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+.sys {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    align-items: flex-start;
+}
+
+.sys div {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1em;
+    color: white;
+    flex: 1 200px;
+}
+
+.sys img {
+    height: 20vh;
+}
+
+
+/*Clientes*/
+
+.clientes {
+    grid-area: clientes;
+    display: inline;
+    border-color: #2075B2;
+    border-top-style: inset;
+    background-color: white;
+}
+
+.clientes h1 {
+    color: #01497C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+.clientes img {
+    height: 8em;
+    margin: 1em;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.clientes a img:hover {
+    /*Para que se seleccione al pasar por arriba*/
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+}

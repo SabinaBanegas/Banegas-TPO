@@ -1,0 +1,151 @@
+/*Hoja de estilos*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /*Que abarque toda la pantalla*/
+    width: 100%;
+    height: 100%;
+    background-color: #EFF5F5;
+}
+
+
+/*Navegador*/
+
+nav {
+    /*Flexbox*/
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    /*Dimensiones*/
+    width: 100%;
+    max-height: 10vh;
+    background-color: #EFF5F5;
+    padding-left: 10vw;
+    /*Border*/
+    border-bottom-style: solid;
+    border-width: 0.1vh;
+    border-color: #2075B2;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav h1 {
+    text-align: center;
+    color: #2075B2;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+nav img {
+    height: 5vh;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30vw;
+    /* justify-content: flex-end; */
+    text-align: center;
+    padding: 0%;
+    list-style-type: none;
+}
+
+li a {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: #2075B2;
+    padding: 4vw;
+    font-size: 1.2em;
+}
+
+.nav_links li a:hover {
+    /*Para que se seleccione al pasar por arriba*/
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+
+
+/*Footer*/
+
+.footer {
+    grid-area: footer;
+    background-color: #01497C;
+    padding-top: 2em;
+}
+
+ul.iconos {
+    display: inline-block;
+    /*Poner un icono al lado del otro*/
+}
+
+ul.specif {
+    list-style: none;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    margin-right: 0px;
+    margin-left: 0;
+}
+
+.specif {
+    margin-left: 60%;
+    display: inline-block;
+    align-content: center;
+}
+
+.mapa {
+    width: 85vw;
+    height: 20em;
+    border-style: hidden;
+    border-radius: 1em;
+    background: transparent;
+    margin-bottom: .5em;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+img.beyco {
+    width: 8em;
+    height: 8em;
+}
+
+
+/*Servicios*/
+
+.servicioss {
+    box-sizing: border-box;
+    width: 90%;
+    height: 300px;
+    margin: 20vw 5vw;
+    margin-left: 5vw;
+    align-items: center;
+}
+
+.servs {
+    z-index: 2;
+    background-color: #176FAF;
+    opacity: 0.3;
+    /*0 y 1*/
+    width: 48%;
+    height: 300px;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+h1.servs {
+    color: black;
+    opacity: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
