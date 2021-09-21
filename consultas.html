@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+
     <meta charset="utf_8">
     <meta http equiv=”X-UA-Compatible” content=”IE-edge”>
     <meta name=”viewport” content="width=device-width, initial-scale=1">
@@ -11,15 +12,16 @@
     <meta name=”keywords” content="BE&CO,electricidad doméstica,impresoras 3D, electricidad, industria, servicio técnico">
     <meta name="title" content="Be&Co-Servicio integral">
     <link rel="shortcut icon" href="img/logo.ico">
+    <!--Link a hoja de estilos-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" type="text/css" href="css/consultas.css">
-    <!--Link a hoja de estilos-->
     <!--Link de fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Link Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!---Iconos-->
     <!--Nombre pestaña-->
     <title> BE&CO-Servicio integral </title>
@@ -35,10 +37,120 @@
             <ul class="nav_links ">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="servicio.html ">SERVICIOS</a></li>
-                <li><a href="index.html#contacto ">CONSULTAS</a></li>
+                <li><a href="consultas.html">CONSULTAS</a></li>
             </ul>
         </div>
     </nav>
+    <h1>Formulario de consulta</h1>
+    <div class="container">
+        <form id="form1" methods="post" action="">
+            <legend>Servicio solicitado</legend>
+            <div class="form-row">
+                <div class="col-auto my-1">
+                    <select class="custom-select mr-sm-2" name="servicio">
+                    <option value="1">Asesoramiento 3D</option>  
+                    <option value="2">Diseño 3D</option>
+                    <option value="3">Impresión 3D</option>
+                    <option value="4">Reparación de impresoras 3D</option>
+                  </select>
+                </div>
+            </div>
+        </form>
+        <form id="reparacion" methods="post" action="">
+            <div class="form-row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Problema</label>
+                    <select class="custom-select mr-sm-2" name="reparacion">
+                    <option value="1">No calienta la cama</option>  
+                    <option value="2">No extruye</option>
+                    <option value="3">No anda el final de carrera</option>
+                  </select>
+                </div>
+            </div>
+        </form>
+        <form id="asesoramiento" methods="post" action="">
+            <div class="form-row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Consulta</label>
+                    <select class="custom-select mr-sm-2" name="asesoramiento">
+                    <option value="1">Quiero comprarme una impresora</option>  
+                    <option value="2">Como conectar los cables</option>
+                    <option value="3">Que firmware utilizar</option>
+                  </select>
+                </div>
+            </div>
+        </form>
+        <form id="diseño" methods="post" action="">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                <label class="custom-file-label" for="customFileLang">Seleccionar foto o diseño a realizar</label>
+            </div>
+        </form>
+        <form id="impresion" methods="post" action="">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                <label class="custom-file-label" for="customFileLang">Seleccionar archivo a imprimir</label>
+            </div>
+        </form>
+        <form id="comentarios" methods="post" action="">
+
+        </form>
+    </div>
+    <div class="container">
+        <form id="datospersonales" methods="post" action="">
+            <legend>Datos personales</legend>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-2">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form-group">Cliente:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-1">
+                        <input type="tel" name="caract" class="form-control" placeholder="Característica" required>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input type="tel" name="telefono" class="form-control" placeholder="Numero de telefono" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <h4>Muchas gracias por completar el formulario. Nos pondremos en contacto a la brevedad para resolver tu consulta </h4>
+    <div class="item footer ">
+        <iframe class="mapa " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.376798798391!2d-60.644342884965276!3d-32.967459380914924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba64b3d3179%3A0x6fe07ef7c36f27bd!2sSan%20Mart%C3%ADn%202576%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1630794114476!5m2!1ses-419!2sar "
+            allowfullscreen=" " loading="lazy ">Av. San Martín 2576, Rosario, Argentina</iframe>
+        <div class="specif ">
+            <img class="beyco " src="img/beyco.jpg " alt="Logotipo BE&CO ">
+            <ul class="specif ">
+                <li><i class="fas fa-map-marker-alt "></i> Av. San Martín 2576, Rosario, Argentina</li>
+                <li><i class="fab fa-whatsapp "></i> +54 9 2355 520102 / +54 9 341 6408091</li>
+                <li><i class="fas fa-envelope "></i> contactobeyco@gmail.com</li>
+                <li><i class="fab fa-instagram "></i> beyco.si</li>
+            </ul>
+        </div>
+    </div>
 </body>
 <footer>
 
