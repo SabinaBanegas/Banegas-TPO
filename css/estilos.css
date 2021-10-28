@@ -1,471 +1,486 @@
-    /*Hoja de estilos*/
-    
-    html,
-    body {
-        /*Que abarque toda la pantalla*/
-        width: 100vw;
+/*Hoja de estilos*/
+
+html,
+body {
+    /*Que abarque toda la pantalla*/
+    width: 100vw;
+    height: 100vh;
+    background-color: #EFF5F5;
+    box-sizing: content-box;
+    margin: 0em;
+}
+
+@media only screen and (min-width: 600px) {
+    /* Si el tamaño es 600px o > */
+    #indexContainer {
+        display: grid;
+        /*grid-template: 6filas/3columnas;*/
+        grid-template: 10vh 40vh 50vh 100vh 60vh 80vh/ 30vw 30vw 40vw;
+        grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
+        grid-column-gap: 0.1vw;
+        grid-row-gap: 0.1vh;
         height: 100vh;
-        background-color: #EFF5F5;
-        box-sizing: content-box;
-        margin: 0em;
-    }
-    
-    @media (min-width: 600px) {
-        #indexContainer {
-            display: grid;
-            /*grid-template: 6filas/3columnas;*/
-            grid-template: 10vh 40vh 50vh 100vh 60vh 80vh/ 30vw 30vw 40vw;
-            grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
-            grid-column-gap: 0.1vw;
-            grid-row-gap: 0.1vh;
-            height: 100vh;
-            width: 100vw;
-            box-sizing: border-box;
-        }
-    }
-    /*Navegador*/
-    
-    .nav {
-        grid-area: nav;
-        position: fixed;
-    }
-    
-    .navbar {
-        /*Flexbox*/
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        /*Dimensiones*/
         width: 100vw;
-        max-height: 10vh;
-        background-color: #EFF5F5;
-        padding-left: 10vw;
-        /*Border*/
-        border-bottom-style: solid;
-        border-width: 0.1vh;
-        border-color: #163172;
+        box-sizing: border-box;
     }
-    
-    .navbar .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+}
+
+
+/*Navegador*/
+
+.nav {
+    grid-area: nav;
+    position: fixed;
+}
+
+.navbar {
+    /*Flexbox*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    /*Dimensiones*/
+    width: 100vw;
+    max-height: 10vh;
+    background-color: #EFF5F5;
+    padding-left: 10vw;
+    /*Border*/
+    border-bottom-style: solid;
+    border-width: 0.1vh;
+    border-color: #163172;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar h1 {
+    text-align: center;
+    color: #163172;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+.navbar img {
+    max-height: 5vh;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30vw;
+    /* justify-content: flex-end; */
+    text-align: center;
+    padding: 0%;
+    list-style-type: none;
+}
+
+.nav_links li a {
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+    color: #163172;
+    padding: 4vw;
+    font-size: 1.2em;
+}
+
+.nav_links li a:hover {
+    /*Para que se seleccione al pasar por arriba*/
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+
+
+/*Footer*/
+
+.footer {
+    grid-area: footer;
+    background-color: #01497C;
+    padding-top: 2em;
+}
+
+.specif {
+    margin-left: 50vw;
+    display: flex;
+    align-items: center;
+}
+
+.redes {
+    display: inline-block;
+    max-width: 30vw;
+    padding-left: 2vw;
+}
+
+.redes ul {
+    list-style: none;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    padding-left: 0vw;
+}
+
+.beycoFooter {
+    max-width: 20vw;
+    max-height: 20vh;
+    align-items: flex-end;
+}
+
+img.beyco {
+    max-width: 20vw;
+    max-height: 20vh;
+}
+
+.mapa {
+    width: 85vw;
+    height: 20em;
+    border-style: hidden;
+    border-radius: 1em;
+    background: transparent;
+    margin-bottom: .5em;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+
+/*INDEX*/
+
+
+/*Main*/
+
+.logotipo {
+    grid-area: logotipo;
+    display: block;
+    margin: auto;
+}
+
+.logomain {
+    max-width: 29vw;
+    max-height: 39vh;
+}
+
+.descrip {
+    grid-area: descrip;
+    padding: 2vw;
+    padding-top: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.marca {
+    grid-area: marca;
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    animation-duration: 3s;
+    animation-name: slidein;
+    margin: 0vw;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%
     }
-    
-    .navbar h1 {
-        text-align: center;
-        color: #163172;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 1.5em;
+    to {
+        margin-left: 0%;
+        width: 100%;
     }
-    
-    .navbar img {
-        max-height: 5vh;
-    }
-    
-    .nav_links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30vw;
-        /* justify-content: flex-end; */
-        text-align: center;
-        padding: 0%;
-        list-style-type: none;
-    }
-    
-    .nav_links li a {
-        font-family: 'DM Sans', sans-serif;
-        text-decoration: none;
-        color: #163172;
-        padding: 4vw;
-        font-size: 1.2em;
-    }
-    
-    .nav_links li a:hover {
-        /*Para que se seleccione al pasar por arriba*/
-        font-weight: bolder;
-        font-size: 1.4em;
-    }
-    /*Footer*/
-    
-    .footer {
-        grid-area: footer;
-        background-color: #01497C;
-        padding-top: 2em;
-    }
-    
-    .specif {
-        margin-left: 50vw;
-        display: flex;
-        align-items: center;
-    }
-    
-    .redes {
-        display: inline-block;
-        max-width: 30vw;
-        padding-left: 2vw;
-    }
-    
-    .redes ul {
-        list-style: none;
-        text-align: left;
-        font-family: 'Roboto Condensed', sans-serif;
-        color: white;
-        padding-left: 0vw;
-    }
-    
-    .beycoFooter {
-        max-width: 20vw;
-        max-height: 20vh;
-        align-items: flex-end;
-    }
-    
-    img.beyco {
-        max-width: 20vw;
-        max-height: 20vh;
-    }
-    
-    .mapa {
-        width: 85vw;
-        height: 20em;
-        border-style: hidden;
-        border-radius: 1em;
-        background: transparent;
-        margin-bottom: .5em;
-        margin-left: 8%;
-        margin-right: 8%;
-    }
-    /*INDEX*/
-    /*Main*/
-    
-    .logotipo {
-        grid-area: logotipo;
-        display: block;
-        margin: auto;
-    }
-    
-    .logomain {
-        max-width: 29vw;
-        max-height: 39vh;
-    }
-    
-    .descrip {
-        grid-area: descrip;
-        padding: 2vw;
-        padding-top: 3vw;
-        display: flex;
-        align-items: center;
-    }
-    
-    .marca {
-        grid-area: marca;
-        display: block;
-        text-align: center;
-        flex-wrap: wrap;
-        animation-duration: 3s;
-        animation-name: slidein;
-        margin: 0vw;
-    }
-    
-    @keyframes slidein {
-        from {
-            margin-left: 100%;
-            width: 100%
-        }
-        to {
-            margin-left: 0%;
-            width: 100%;
-        }
-    }
-    
-    .marca h1 {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 7vw;
-        margin-top: 5vh;
-        color: #163172;
-    }
-    
-    .marca h2 {
-        font-family: 'Roboto Condensed', sans-serif;
-    }
-    
-    .descrip p {
-        font-family: 'DM Sans', sans-serif;
-    }
-    
-    .descrip p,
-    .marca h2 {
-        color: #1E56A0;
-        font-size: 2vw;
-    }
-    
-    .foto {
-        grid-area: foto;
-        display: flex;
-        align-items: center;
-    }
-    
-    .foto .taller {
-        max-width: 39vw;
-        max-height: 49vh;
-    }
-    /*Servicios*/
-    
-    .servicios {
-        grid-area: servicios;
-        background-color: #01497C;
-        padding-left: 1em;
-    }
-    
-    .servicios h1 {
-        color: white;
-        font-size: 2em;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .sys {
-        display: flex;
-        align-items: flex-start;
-        text-align: center;
+}
+
+.marca h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 7vw;
+    margin-top: 5vh;
+    color: #163172;
+}
+
+.marca h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.descrip p {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.descrip p,
+.marca h2 {
+    color: #1E56A0;
+    font-size: 2vw;
+}
+
+.foto {
+    grid-area: foto;
+    display: flex;
+    align-items: center;
+}
+
+.foto .taller {
+    max-width: 39vw;
+    max-height: 49vh;
+}
+
+
+/*Servicios*/
+
+.servicios {
+    grid-area: servicios;
+    background-color: #01497C;
+    padding-left: 1em;
+}
+
+.servicios h1 {
+    color: white;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sys {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    width: 100vw;
+    max-height: 70vh;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.sys div {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1em;
+    color: white;
+    /* flex: 1 200px; */
+    align-items: center;
+}
+
+.sys img {
+    max-height: 18vh;
+    filter: invert();
+}
+
+.sys button {
+    display: inline-block;
+    background-color: #ccd6eb;
+    color: #01497C;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    width: 20vw;
+    height: 8vh;
+    margin: 1em;
+    transition: all 0.5s;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3vh;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.sys button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sys button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.sys button:hover span {
+    padding-right: 15px;
+}
+
+.sys button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*Clientes*/
+
+.clientes {
+    grid-area: clientes;
+    display: inline;
+    align-items: center;
+    border-color: #2075B2;
+    border-top-style: inset;
+    background-color: white;
+}
+
+.clientes h1 {
+    color: #01497C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+.clientes img {
+    height: 8em;
+    margin: 1em;
+    padding: 1vw;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.clientes a img:hover {
+    /*Para que se seleccione al pasar por arriba*/
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+}
+
+
+/*servicio.html*/
+
+.containerServ {
+    width: 100vw;
+    height: 160vh;
+    padding-top: 8vh;
+    display: block;
+}
+
+.serv1 {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    background-color: #01497C;
+    border-color: #2075B2;
+    border-top-style: inset;
+    color: white;
+}
+
+.serv2 {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    border-color: #2075B2;
+    border-top-style: inset;
+    background-color: white;
+    color: #63686b;
+}
+
+.serv11,
+.serv22 {
+    max-width: 40vw;
+    max-height: 40vh;
+    padding: 5vw;
+}
+
+.serv11 h1,
+.serv22 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+}
+
+.serv11 p,
+.serv11 ul,
+.serv22 p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.serv12,
+.serv21 {
+    max-width: 60vw;
+    max-height: 40vh;
+    align-items: center;
+    padding: 5vw;
+}
+
+.img1_1,
+.img1_2,
+.img1_3,
+.img1_4 {
+    max-height: 35vh;
+    max-width: 35vw;
+}
+
+
+/* Formulario de consultas */
+
+#formQuestion {
+    padding-top: 10vh;
+    padding-right: 0vw;
+    padding-left: 0vw;
+}
+
+.formTitle {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.formH2 {
+    color: #01497C;
+    border-color: #2075B2;
+    border-bottom-style: inset;
+}
+
+.formP {
+    color: #01497C;
+    border-bottom-style: inset;
+    border-top-color: #2075B2;
+    border-width: 1vw;
+}
+
+#formContainer {
+    margin-left: 1vw;
+    margin-right: 0vw;
+    background-color: white;
+}
+
+.fin {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    color: #01497C;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Si el tamaño es 600px o < */
+    #indexContainer {
+        display: grid;
+        grid-template: 10vh 20vh 20vh 30vh 30vh 20vh/ 30vw 30vw 40vw;
+        grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
+        grid-column-gap: 0.1vw;
+        grid-row-gap: 0.1vh;
+        height: 100vh;
         width: 100vw;
-        max-height: 70vh;
-        padding: 0.5rem;
-        flex-wrap: wrap;
-        font-family: 'DM Sans', sans-serif;
+        box-sizing: border-box;
     }
-    
-    .sys div {
-        margin: 0.5rem;
-        padding: 0.5rem;
-        font-size: 1em;
-        color: white;
-        /* flex: 1 200px; */
-        align-items: center;
+    .clientes img {
+        max-height: 10vw;
+        margin: 1em;
+        padding: 1vw;
+        margin: 1em;
+        padding: 1vw;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
     }
-    
     .sys img {
-        max-height: 18vh;
+        max-height: 5vh;
         filter: invert();
     }
-    
     .sys button {
-        display: inline-block;
-        background-color: #ccd6eb;
-        color: #01497C;
-        text-align: center;
         font-size: 1em;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        width: 20vw;
-        height: 8vh;
-        margin: 1em;
-        transition: all 0.5s;
-        border-color: black;
-        border-style: solid;
-        border-radius: 3vh;
-        cursor: pointer;
-        vertical-align: middle;
+        width: 15vw;
+        height: 5vh;
     }
-    
-    .sys button span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
+    h2 {
+        font-size: 1.2em;
     }
-    
-    .sys button span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        transition: 0.5s;
-    }
-    
-    .sys button:hover span {
-        padding-right: 15px;
-    }
-    
-    .sys button:hover span:after {
-        opacity: 1;
-        right: 0;
-    }
-    /*Clientes*/
-    
-    .clientes {
-        grid-area: clientes;
-        display: inline;
-        align-items: center;
-        border-color: #2075B2;
-        border-top-style: inset;
-        background-color: white;
-    }
-    
-    .clientes h1 {
-        color: #01497C;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2em;
-        text-align: left;
-    }
-    
-    @media only screen and (min-width: 768px) {
-        .clientes img {
-            height: 8em;
-            margin: 1em;
-            padding: 1vw;
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-        }
-    }
-    
-    .clientes a img:hover {
-        /*Para que se seleccione al pasar por arriba*/
-        filter: grayscale(0);
-        -webkit-filter: grayscale(0);
-        -moz-filter: grayscale(0);
-        -ms-filter: grayscale(0);
-        -o-filter: grayscale(0);
-    }
-    /*servicio.html*/
-    
-    .containerServ {
-        width: 100vw;
-        height: 160vh;
-        padding-top: 8vh;
-        display: block;
-    }
-    
-    .serv1 {
-        width: 100vw;
-        height: 40vh;
-        display: flex;
-        align-items: center;
-        background-color: #01497C;
-        border-color: #2075B2;
-        border-top-style: inset;
-        color: white;
-    }
-    
-    .serv2 {
-        width: 100vw;
-        height: 40vh;
-        display: flex;
-        align-items: center;
-        border-color: #2075B2;
-        border-top-style: inset;
-        background-color: white;
-        color: #63686b;
-    }
-    
-    .serv11,
-    .serv22 {
-        max-width: 40vw;
-        max-height: 40vh;
-        padding: 5vw;
-    }
-    
-    .serv11 h1,
-    .serv22 h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2em;
-    }
-    
-    .serv11 p,
-    .serv11 ul,
-    .serv22 p {
-        font-family: 'Roboto Condensed', sans-serif;
-    }
-    
-    .serv12,
-    .serv21 {
-        max-width: 60vw;
-        max-height: 40vh;
-        align-items: center;
-        padding: 5vw;
-    }
-    
-    .img1_1,
-    .img1_2,
-    .img1_3,
-    .img1_4 {
-        max-height: 35vh;
-        max-width: 35vw;
-    }
-    /* Formulario de consultas */
-    
-    #formQuestion {
-        padding-top: 10vh;
-        padding-right: 0vw;
-        padding-left: 0vw;
-    }
-    
-    .formTitle {
-        text-align: center;
-        font-family: 'DM Sans', sans-serif;
-    }
-    
-    .formH2 {
-        color: #01497C;
-        border-color: #2075B2;
-        border-bottom-style: inset;
-    }
-    
-    .formP {
-        color: #01497C;
-        border-bottom-style: inset;
-        border-top-color: #2075B2;
-        border-width: 1vw;
-    }
-    
-    #formContainer {
-        margin-left: 1vw;
-        margin-right: 0vw;
-        background-color: white;
-    }
-    
-    .fin {
-        text-align: center;
-        font-family: 'DM Sans', sans-serif;
-        color: #01497C;
-    }
-    
-    @media (max-width: 600px) {
-        #indexContainer {
-            display: grid;
-            /*grid-template: 6filas/3columnas;*/
-            grid-template: 10vh 20vh 20vh 30vh 30vh 20vh/ 30vw 30vw 40vw;
-            grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
-            grid-column-gap: 0.1vw;
-            grid-row-gap: 0.1vh;
-            height: 100vh;
-            width: 100vw;
-            box-sizing: border-box;
-        }
-        .clientes img {
-            max-height: 10vw;
-            margin: 1em;
-            padding: 1vw;
-            margin: 1em;
-            padding: 1vw;
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-        }
-        .sys img {
-            max-height: 5vh;
-            filter: invert();
-        }
-        .sys button {
-            font-size: 1em;
-            width: 15vw;
-            height: 5vh;
-        }
-        h2 {
-            font-size: 1.2em;
-        }
-    }
+}
