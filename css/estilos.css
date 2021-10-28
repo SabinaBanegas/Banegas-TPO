@@ -10,19 +10,16 @@ body {
     margin: 0em;
 }
 
-@media only screen and (min-width: 600px) {
-    /* Si el tamaño es 600px o > */
-    #indexContainer {
-        display: grid;
-        /*grid-template: 6filas/3columnas;*/
-        grid-template: 10vh 40vh 50vh 100vh 60vh 80vh/ 30vw 30vw 40vw;
-        grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
-        grid-column-gap: 0.1vw;
-        grid-row-gap: 0.1vh;
-        height: 100vh;
-        width: 100vw;
-        box-sizing: border-box;
-    }
+#indexContainer {
+    display: grid;
+    /*grid-template: 6filas/3columnas;*/
+    grid-template: 10vh 40vh 50vh 100vh 60vh 80vh/ 30vw 30vw 40vw;
+    grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
+    grid-column-gap: 0.1vw;
+    grid-row-gap: 0.1vh;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 
@@ -445,42 +442,4 @@ img.beyco {
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     color: #01497C;
-}
-
-@media only screen and (max-width: 600px) {
-    /* Si el tamaño es 600px o < */
-    #indexContainer {
-        display: grid;
-        grid-template: 10vh 20vh 20vh 30vh 30vh 20vh/ 30vw 30vw 40vw;
-        grid-template-areas: "nav nav nav" "logotipo marca marca" "descrip descrip foto" "servicios servicios servicios" "clientes clientes clientes" "footer footer footer";
-        grid-column-gap: 0.1vw;
-        grid-row-gap: 0.1vh;
-        height: 100vh;
-        width: 100vw;
-        box-sizing: border-box;
-    }
-    .clientes img {
-        max-height: 10vw;
-        margin: 1em;
-        padding: 1vw;
-        margin: 1em;
-        padding: 1vw;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        -o-filter: grayscale(100%);
-    }
-    .sys img {
-        max-height: 5vh;
-        filter: invert();
-    }
-    .sys button {
-        font-size: 1em;
-        width: 15vw;
-        height: 5vh;
-    }
-    h2 {
-        font-size: 1.2em;
-    }
 }
