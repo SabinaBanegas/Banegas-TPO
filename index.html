@@ -12,11 +12,12 @@
     <meta name="title" content="Be&Co-Servicio integral">
     <link rel="shortcut icon" href="img/logo.ico">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <!--Link a hoja de estilos-->
     <!--Link de fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Kodchasan:wght@200&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -26,49 +27,67 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <img class="logobeyco" src="img/logobeyco.png" alt=" Logotipo BE&CO">
-            <h1>BE&CO</h1>
-        </div>
-        <div class="menu ">
-            <ul class="nav_links ">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="servicio.html ">SERVICIOS</a></li>
-                <li><a href="consultas.html">CONSULTAS</a></li>
-            </ul>
-        </div>
-    </nav>
     <!-- Grid -->
-    <section class="container ">
-        <div class="item main ">
-            <img class="logobeyco " src="img/logobeyco.png " alt="Logo Be&CO ">
-            <h1>BE&CO</h1>
-            <p> hola</p>
-            <h2>SERVICIO 3D INTEGRAL</h2>
-            <p class="presentacion ">Somos un servicio de reparación de impresoras <strong>3D</strong>.Brindamos servicio técnico a particulares y empresas.
-            </p>
+    <section class="container" id="indexContainer">
+        <div class="item nav">
+            <!-- Flexbox -->
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logobeyco" src="img/logobeyco.png" alt=" Logotipo BE&CO">
+                    <h1>BE&CO</h1>
+                </div>
+                <div class="menu ">
+                    <ul class="nav_links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servicio.html ">Servicios</a></li>
+                        <li><a href="consultas.html">Consultas</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <a name="up "></a>
-        <div class="servicios">
+        <div class="item logotipo">
+            <img class="logomain" src="img/logobeyco.png" alt=" Logotipo BE&CO">
+        </div>
+        <div class="item marca">
+            <h1>BE&CO</h1>
+            <h2>Servicio 3D integral</h2>
+        </div>
+        <div class="item descrip">
+            <!-- <p style="font-family:'DM Sans', sans-serif ;" style="color:#163172;">DM Sans</p>
+            <p style="font-family:'Kodchasan', sans-serif;" style="color:#1E56A0;">Kodchasan</p>
+            <p style="font-family: 'Montserrat', sans-serif;" style="color:#D6E4F0;">Montserrat</p>
+            <p style="font-family: 'Roboto', sans-serif;" style="color:#F6F6F6;">Roboto</p> -->
+            <p class="presentacion ">Somos un servicio integral en el rubro de las impresoras <strong>3D</strong>.
+                <br><br>Brindamos un servicio completo para que tu trabajo resulte excelente <br> <br>Priorizando la calidad </p>
+        </div>
+        <div class="item foto">
+            <img class="taller" src="img/taller.jpeg " alt="Taller de reparación ">
+
+        </div>
+
+        <div class="item servicios">
             <h1>Nuestros servicios</h1>
             <!-- Flexbox -->
             <div class="sys">
-                <div class="diseño">
-                    <h2>Diseño 3D</h2>
-                    <img class="diseño " src="img/diseño.png " alt="Servicio de diseño ">
+                <div class="reparacion">
+                    <img class="reparacion " src="img/reparacion.png " alt="Servicio de reparación ">
+                    <h2>Reparación de impresoras 3D</h2>
+                    <button class="button"><a href="servicio.html#rep"><span>Ampliar </span></a></button>
                 </div>
                 <div clas="asesoramiento">
-                    <h2>Asesoramiento 3D</h2>
                     <img class="asesoramiento " src="img/asesoramiento.png" alt="Servicio de asesoramiento ">
+                    <h2>Asesoramiento 3D</h2>
+                    <button class="button"><a href="servicio.html#ase"><span>Ampliar </span></a></button>
                 </div>
-                <div class="reparacion">
-                    <h2>Reparación de impresoras 3D</h2>
-                    <img class="reparacion " src="img/reparacion.png " alt="Servicio de reparación ">
+                <div class="diseno">
+                    <img class="diseno " src="img/diseno.png " alt="Servicio de diseno ">
+                    <h2>Diseño 3D</h2>
+                    <button class="button"><a href="servicio.html#dis"><span>Ampliar </span></a></button>
                 </div>
                 <div class="impresion">
+                    <img class="impresion " src="img/impresion.png" alt="Servicio de impresión ">
                     <h2>Impresión 3D</h2>
-                    <img class="impresion " src="img/impresion.jpg " alt="Servicio de impresión ">
+                    <button class="button"><a href="servicio.html#imp"><span>Ampliar </span></a></button>
                 </div>
             </div>
         </div>
@@ -92,17 +111,21 @@
         <div class="item footer ">
             <iframe class="mapa " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.376798798391!2d-60.644342884965276!3d-32.967459380914924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aba64b3d3179%3A0x6fe07ef7c36f27bd!2sSan%20Mart%C3%ADn%202576%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1630794114476!5m2!1ses-419!2sar "
                 allowfullscreen=" " loading="lazy ">Av. San Martín 2576, Rosario, Argentina</iframe>
-            <div class="specif ">
-                <img class="beyco " src="img/beyco.jpg " alt="Logotipo BE&CO ">
-                <ul class="specif ">
-                    <li><i class="fas fa-map-marker-alt "></i> Av. San Martín 2576, Rosario, Argentina</li>
-                    <li><i class="fab fa-whatsapp "></i> +54 9 2355 520102 / +54 9 341 6408091</li>
-                    <li><i class="fas fa-envelope "></i> contactobeyco@gmail.com</li>
-                    <li><i class="fab fa-instagram "></i> beyco.si</li>
-                </ul>
+            <div class="specif">
+                <div class="beycoFooter">
+                    <img class="beyco" src="img/beyco.jpg " alt="Logotipo BE&CO ">
+                </div>
+                <div class="redes">
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt "></i> Av. San Martín 2576, Rosario, Argentina</li>
+                        <li><i class="fab fa-whatsapp "></i> +54 9 2355 520102 / +54 9 341 6408091</li>
+                        <li><i class="fas fa-envelope "></i> contactobeyco@gmail.com</li>
+                        <li><i class="fab fa-instagram "></i> beyco.si</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <a href="index.html#up ">Subir</a>
+
     </section>
 </body>
 
